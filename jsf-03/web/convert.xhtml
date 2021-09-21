@@ -10,14 +10,15 @@
 </h:head>
 <h:body>
     <h:form>
+        <h:outputText id="o" value="原始数据  #{data.no}"/><br/>
         <h:outputText id="o1" value="maxFractionDigits: #{data.no}">
-            <f:convertNumber for="o1" maxFractionDigits="1"/>
+            <f:convertNumber for="o1" maxFractionDigits="2"/>
         </h:outputText><br/>
         <h:outputText id="o2" value="minFractionDigits: #{data.no}">
             <f:convertNumber for="o2" minFractionDigits="3"/>
         </h:outputText><br/>
         <h:outputText id="o3" value="#{data.no}">
-
+            <f:convertNumber for="o3" maxIntegerDigits="3"/>
         </h:outputText><br/>
         <h:outputText id="d1" value="#{data.date}">
             <!--pattern="yyyy/mm/dd" 日期格式-->

@@ -3,21 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<head>
+<h:head>
     MessagesTags
-</head>
+</h:head>
 <h:head>
 </h:head>
 <h:body>
     <h:form>
         <h:panelGrid columns="1" width="60%">
             <f:facet name="header">Login</f:facet>
+            <!--只要写了footer就会被放到最后-->
             <f:facet name="footer">
                 <h:outputText value="快到中秋节了"/>
                 <h:commandButton action="Layoutpage" value="Submit"/>
             </f:facet>
+            <!--panelGroup：将其中的标签绑定为一组，像一个div-->
             <h:panelGroup>
-                <h:outputText value="Enter ID:"/><h:inputText id="it1" required="true" requiredMessage="ynb"/>
+                <h:outputText value="Enter ID:"/>
+                <!-- required：是否必填，requiredMessage：输入非法提示消息 -->
+                <h:inputText id="it1" required="true" requiredMessage="输入ID"/>
+                <!-- 要输出哪个标签的提示信息 -->
                 <h:message for="it1"/>
             </h:panelGroup>
             <h:panelGroup>
@@ -26,6 +31,7 @@
                 </h:inputSecret>
             </h:panelGroup>
         </h:panelGrid>
+        <!--不写for绑定标签id则输出所有提示消息， message不加s则输出到控制台-->
         <h:messages/>
     </h:form>
 </h:body>

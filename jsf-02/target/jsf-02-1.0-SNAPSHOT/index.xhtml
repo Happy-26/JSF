@@ -3,9 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<h:head>
-    JSF Home page
-</h:head>
+<h:head>JSF Home page</h:head>
 <h:body>
     <table width="90%" border="1">
         <tr>
@@ -32,7 +30,6 @@
         <tr>
             <td>
                 <h2>输出标记</h2>
-                <!--  -->
                 <h:outputText value="today 0915"/>
                 <br/>
                 <h:outputLink value="http://www.baidu.com">
@@ -58,7 +55,7 @@
                 <h:form>
                     <h:commandButton action="pge1" value="Submit"/>
                     <br/>
-                    <h:commandLink action="page1" value="JumpLink"/>
+                    <h:commandLink action="pge1" value="JumpLink"/>
                 </h:form>
             </td>
         </tr>
@@ -93,17 +90,18 @@
                     <f:selectItem id="sl555" itemLabel="嬴政" itemValue="FS"/>
                 </h:selectOneRadio>
             </td>
-
-            <!--多选-->
-            <h:selectManyCheckbox value="haha">
-                <f:selectItem id="sl1111" itemLabel="王昭君" itemValue="FS"/>
-                <f:selectItem id="sl2222" itemLabel="吕布" itemValue="ZS"/>
-                <f:selectItem id="sl3333" itemLabel="妲己" itemValue="FS"/>
-                <f:selectItem id="sl4444" itemLabel="云中君" itemValue="CK"/>
-                <f:selectItem id="sl5555" itemLabel="嬴政" itemValue="FS"/>
-            </h:selectManyCheckbox>
         </tr>
         <tr>
+            <td>
+                <!--多选-->
+                <h:selectManyCheckbox value="haha">
+                    <f:selectItem id="sl1111" itemLabel="王昭君" itemValue="FS"/>
+                    <f:selectItem id="sl2222" itemLabel="吕布" itemValue="ZS"/>
+                    <f:selectItem id="sl3333" itemLabel="妲己" itemValue="FS"/>
+                    <f:selectItem id="sl4444" itemLabel="云中君" itemValue="CK"/>
+                    <f:selectItem id="sl5555" itemLabel="嬴政" itemValue="FS"/>
+                </h:selectManyCheckbox>
+            </td>
             <td>
                 <!--可多选-->
                 <h:selectManyListbox value="lal">
@@ -124,15 +122,15 @@
                     <f:selectItem itemLabel="嬴政" itemValue="FS"/>
                 </h:selectOneListbox>
             </td>
-        </tr>
-        <tr>
-            <h:selectManyMenu>
-                <f:selectItem itemLabel="王昭君" itemValue="FS"/>
-                <f:selectItem itemLabel="吕布" itemValue="ZS"/>
-                <f:selectItem itemLabel="妲己" itemValue="FS"/>
-                <f:selectItem itemLabel="云中君" itemValue="CK"/>
-                <f:selectItem itemLabel="嬴政" itemValue="FS"/>
-            </h:selectManyMenu>
+            <td>
+                <h:selectManyMenu>
+                    <f:selectItem itemLabel="王昭君" itemValue="FS"/>
+                    <f:selectItem itemLabel="吕布" itemValue="ZS"/>
+                    <f:selectItem itemLabel="妲己" itemValue="FS"/>
+                    <f:selectItem itemLabel="云中君" itemValue="CK"/>
+                    <f:selectItem itemLabel="嬴政" itemValue="FS"/>
+                </h:selectManyMenu>
+            </td>
         </tr>
     </table>
 </h:body>

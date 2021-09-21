@@ -2,14 +2,37 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="jsf-02:war exploded" />
+      <artifact name="jsf-03:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7c7520-80a7-4d7a-9d39-858a32500ce5" name="默认的" comment="" />
+    <list default="true" id="8b7c7520-80a7-4d7a-9d39-858a32500ce5" name="默认的" comment="增加注释">
+      <change afterPath="$PROJECT_DIR$/jsf-02/src/main/webapp/datatable2.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/src/main/java/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/src/main/java/domain/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/src/main/webapp/dataTable.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/src/main/webapp/dataTable.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/src/main/webapp/message.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/src/main/webapp/message.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/target/classes/domain/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/target/classes/domain/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/WEB-INF/classes/domain/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/WEB-INF/classes/domain/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/dataTable.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/dataTable.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/message.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-02/target/jsf-02-1.0-SNAPSHOT/message.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-03/web/convert.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-03/web/convert.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsf-03/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/jsf-03/web/index.xhtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +48,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -56,7 +80,9 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1y6lI5R9HNSciq80a40DdmkAvZk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="更新" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -89,12 +115,13 @@
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 5.0.0">
     <configuration name="GlassFish 5.0.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.0" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsf-02/" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="jsf-02:war exploded">
+        <artifact name="jsf-03:Web exploded">
           <settings>
-            <option name="contextRoot" value="/jsf-02" />
+            <option name="contextRoot" value="/jsf-03" />
             <option name="defaultContextRoot" value="false" />
           </settings>
         </artifact>
@@ -159,7 +186,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="jsf-02:war exploded" />
+          <artifact name="jsf-03:Web exploded" />
         </option>
       </method>
     </configuration>
@@ -273,12 +300,40 @@
       <workItem from="1631964835461" duration="1855000" />
       <workItem from="1632054801506" duration="860000" />
       <workItem from="1632058194028" duration="1403000" />
-      <workItem from="1632201281771" duration="356000" />
+      <workItem from="1632201281771" duration="613000" />
+      <workItem from="1632201912570" duration="195000" />
+      <workItem from="1632202122752" duration="4739000" />
+      <workItem from="1632216363358" duration="862000" />
     </task>
+    <task id="LOCAL-00001" summary="无">
+      <created>1632201718512</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632201718512</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="无" />
+    <MESSAGE value="增加注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加注释" />
   </component>
   <component name="WindowStateProjectService">
     <state x="728" y="470" key="#Glassfish_Server" timestamp="1631892080369">
@@ -293,10 +348,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="741" y="421" key="#Tomcat_Server/0.0.1920.1050@0.0.1920.1050" timestamp="1631892094709" />
-    <state x="421" y="0" width="1092" height="1050" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632054989271">
+    <state x="421" y="0" width="1092" height="1050" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632216925122">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="421" y="0" width="1092" height="1050" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1632054989271" />
+    <state x="421" y="0" width="1092" height="1050" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1632216925122" />
     <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1631966140192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -333,38 +388,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="654" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1632201608073" />
-    <state width="1877" height="414" key="GridCell.Tab.0.bottom" timestamp="1632201627690">
+    <state width="1603" height="303" key="GridCell.Tab.0.bottom" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="414" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627690" />
-    <state width="1877" height="414" key="GridCell.Tab.0.center" timestamp="1632201627689">
+    <state width="1603" height="303" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
+    <state width="1603" height="303" key="GridCell.Tab.0.center" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="414" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627689" />
-    <state width="1877" height="414" key="GridCell.Tab.0.left" timestamp="1632201627689">
+    <state width="1603" height="303" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
+    <state width="1603" height="303" key="GridCell.Tab.0.left" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="414" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627689" />
-    <state width="1877" height="414" key="GridCell.Tab.0.right" timestamp="1632201627689">
+    <state width="1603" height="303" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
+    <state width="1603" height="303" key="GridCell.Tab.0.right" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="414" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627689" />
-    <state width="1605" height="308" key="GridCell.Tab.1.bottom" timestamp="1632055789371">
+    <state width="1603" height="303" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
+    <state width="1603" height="303" key="GridCell.Tab.1.bottom" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789371" />
-    <state width="1605" height="308" key="GridCell.Tab.1.center" timestamp="1632055789371">
+    <state width="1603" height="303" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
+    <state width="1603" height="303" key="GridCell.Tab.1.center" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789371" />
-    <state width="1605" height="308" key="GridCell.Tab.1.left" timestamp="1632055789371">
+    <state width="1603" height="303" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
+    <state width="1603" height="303" key="GridCell.Tab.1.left" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789371" />
-    <state width="1605" height="308" key="GridCell.Tab.1.right" timestamp="1632055789371">
+    <state width="1603" height="303" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
+    <state width="1603" height="303" key="GridCell.Tab.1.right" timestamp="1632216816035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789371" />
+    <state width="1603" height="303" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1632216816035" />
     <state width="1549" height="298" key="GridCell.Tab.13.bottom" timestamp="1631597985122">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -441,6 +496,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="380" y="95" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1632201330860" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1632206230760">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1632206230760" />
     <state x="859" y="388" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1631878260556">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -453,6 +512,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="800" y="196" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1631878338575" />
+    <state x="773" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632206338578">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="773" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1632206338578" />
     <state x="465" y="179" width="955" height="718" key="new project wizard" timestamp="1631966706118">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

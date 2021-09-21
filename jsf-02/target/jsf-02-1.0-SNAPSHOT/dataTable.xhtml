@@ -9,10 +9,32 @@
 </h:head>
 
 <h:body style="text-align: center; width: 100%">
-    <h:dataTable value="#{student.marvelList }" var="item" bgcolor="orange" border="4" frame="border" width="100%" rules="all"
-                 cellpadding="5px" cellspacing="3" first="0" rows="5">
+    <!--
+          h:dataTable特性
+              bgcolor           表的背景色
+              border            边框宽度
+              cellspacing       表格单元格之间的间距
+              cellpadding       表格单元格周围的边距
+              columnClasses     用于列，逗号分隔的css类列表
+              dir               未继承方向的文本的文本方向，有效值，左到右LTR，右到左RTL
+              first             表示显示的第一行的索引，即从第几个开始显示
+              footerClass       表尾的CSS类
+              frame             表周围框架边的说明，有效值：none、above、below、hsides、vsides、lhs、rhs、box、border
+              headClass         表头的CSS类
+              rowClasses        行的CSS类列表，由逗号分隔
+              rows              表中显示的行数，以first特性指定的行开始，如果设置为0，将显示所有行
+              rules             单元格间绘制的线的说明，有效值:groups、rows、columns、all
+              var               由数据表创建的变量的名称，表示Value中的当前项
+              binding、id、rendered、styleClass、value  基本特性
+              lang、style、title、width html4
+              onclick、ondbclick、onkeydown、onkeypress、onkeyup、onmousedown、onmousemove、onmouseout、onmouseover、onmouseup dhtml事件
+    -->
+    <h:dataTable value="#{student.marvelList }" var="item" bgcolor="orange" border="4" frame="border" width="100%"
+                 rules="all" cellpadding="5px" cellspacing="3" first="2" rows="5">
         <f:facet name="header">介是一个表头</f:facet>
+        <!-- 一列 -->
         <h:column>
+            <!--header表示th-->
             <f:facet name="header">年份</f:facet>
             <h:outputText value="#{item.year}"/>
         </h:column>

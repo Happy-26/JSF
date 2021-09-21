@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>datatable 练习</h:head>
+<h:body>
+    <h:dataTable value="#{student.marvelList}" first="0" frame="border" rows="5" rules="all" var="item2" cellpadding="5" width="100%" border="2">
+        <f:facet name="header">表头</f:facet>
+        <h:column>
+            <f:facet name="header">姓名</f:facet>
+            <h:outputText value="#{item2.name}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">年龄</f:facet>
+            <h:outputText value="#{item2.year}"/>
+        </h:column>
+        <f:facet name="footer">表尾</f:facet>
+    </h:dataTable>
+</h:body>
+</html>

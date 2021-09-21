@@ -59,9 +59,12 @@ public class Student {
         marvelList = new ArrayList();
 
         // 调用dao类
-        marvelList.add(new Marvel(2012, "毫克", "妇联", "国外"));
-        marvelList.add(new Marvel(2012, "毫克", "妇联", "国外"));
-        marvelList.add(new Marvel(2012, "毫克", "妇联", "国外"));
+        marvelList.add(new Marvel(1, "毫克", "妇联", "国外"));
+        marvelList.add(new Marvel(2, "小米", "妇联", "国外"));
+        marvelList.add(new Marvel(3, "小刚", "妇联", "国外"));
+        marvelList.add(new Marvel(4, "小红", "妇联", "国外"));
+        marvelList.add(new Marvel(5, "阿猫", "妇联", "国外"));
+        marvelList.add(new Marvel(6, "阿狗", "妇联", "国外"));
         return marvelList;
     }
 

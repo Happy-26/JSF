@@ -17,6 +17,7 @@
                   <!--  -->
                   <h:inputText required="true" requiredMessage="请输入" id="it1">
                      <f:validateLength for="it1" minimum="3" maximum="5"/>
+                      <!--只要写在标签内，不用绑定id也可以-->
                      <f:validateLongRange minimum="100" maximum="1000"/>
                      <f:validateDoubleRange for="it1" minimum="100" maximum="1000"/>
                       <!-- 正则 -->
