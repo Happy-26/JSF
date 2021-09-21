@@ -23,6 +23,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
@@ -53,6 +56,7 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1y6lI5R9HNSciq80a40DdmkAvZk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -61,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/APP/JSP/javax-inject(1).jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="构件" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -269,7 +273,7 @@
       <workItem from="1631964835461" duration="1855000" />
       <workItem from="1632054801506" duration="860000" />
       <workItem from="1632058194028" duration="1403000" />
-      <workItem from="1632201281771" duration="49000" />
+      <workItem from="1632201281771" duration="356000" />
     </task>
     <servers />
   </component>
@@ -313,26 +317,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="#项目结构/0.0.1920.1050@0.0.1920.1050" timestamp="1631925975894" />
-    <state x="739" y="306" key="FileChooserDialogImpl" timestamp="1631966700462">
+    <state x="716" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1632201448941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="739" y="306" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1631966700462" />
-    <state width="1605" height="308" key="GridCell.Tab.0.bottom" timestamp="1632055789371">
+    <state x="716" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1050@0.0.1920.1050" timestamp="1632201448941" />
+    <state x="739" y="306" key="FileChooserDialogImpl" timestamp="1632201508293">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789371" />
-    <state width="1605" height="308" key="GridCell.Tab.0.center" timestamp="1632055789371">
+    <state x="739" y="306" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1632201508293" />
+    <state x="845" y="422" key="Github.ShareDialog" timestamp="1632201569566">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789371" />
-    <state width="1605" height="308" key="GridCell.Tab.0.left" timestamp="1632055789370">
+    <state x="845" y="422" key="Github.ShareDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1632201569566" />
+    <state x="654" y="218" key="Github.UntrackedFilesDialog" timestamp="1632201608073">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789370" />
-    <state width="1605" height="308" key="GridCell.Tab.0.right" timestamp="1632055789371">
+    <state x="654" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1632201608073" />
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom" timestamp="1632201627690">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1605" height="308" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1632055789371" />
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627690" />
+    <state width="1877" height="414" key="GridCell.Tab.0.center" timestamp="1632201627689">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627689" />
+    <state width="1877" height="414" key="GridCell.Tab.0.left" timestamp="1632201627689">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627689" />
+    <state width="1877" height="414" key="GridCell.Tab.0.right" timestamp="1632201627689">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1632201627689" />
     <state width="1605" height="308" key="GridCell.Tab.1.bottom" timestamp="1632055789371">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
