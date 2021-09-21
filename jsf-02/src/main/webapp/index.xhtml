@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    JSF Home page
+</h:head>
+<h:body>
+    <table width="90%" border="1">
+        <tr>
+            <td>
+                <h2>输入标记</h2>
+                <h:form>
+                    <h:inputText id="it1" value="pass data" required="true" maxlength="5" title="this is inputText">
+                        <!-- outputLabel 与inputText不结合使用 -->
+                        <h:outputLabel value="Enter password"/>
+                    </h:inputText>
+                    <br/>
+                    <h:inputTextarea id="ita1" cols="20" rows="20">
+                        <h:outputLabel value="Enter TextMsg:"/>
+                    </h:inputTextarea>
+                    <br/>
+                    <h:inputSecret value="wwww">
+                        <h:outputLabel value="Enter password"/>
+                    </h:inputSecret>
+                    <br/>
+                    <h:inputHidden value="hidden"/>
+                </h:form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>输出标记</h2>
+                <!--  -->
+                <h:outputText value="today 0915"/>
+                <br/>
+                <h:outputLink value="http://www.baidu.com">
+                    <h:outputText value="Jump to Baidu"/>
+                </h:outputLink>
+                <br/>
+                <!-- 中间不能有单引号，否则不能正确显示 -->
+                <h:outputFormat value="Hello What is Your Favourite {0}? {1}? {2}?">
+                    <f:param value="Basketball"/>
+                    <f:param value="Coding"/>
+                    <f:param value="become better"/>
+                </h:outputFormat>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h:graphicImage value="./1.jpg" width="160pt" height="160pt" alt="notfound" title="Bear is Bear"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h:form>
+                    <h:commandButton action="pge1" value="Submit"/>
+                    <br/>
+                    <h:commandLink action="page1" value="JumpLink"/>
+                </h:form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h:outputText value="勾一下呗   true"/>
+                <!-- 写true默认勾选，false不勾选 -->
+                <h:selectBooleanCheckbox value="true"/>
+
+                <h:outputText value="勾一下呗   false"/>
+                <h:selectBooleanCheckbox value="false"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!--<selectOntMenu ItemValue为int-->
+                <h:selectOneMenu value="passdata">
+                    <f:selectItem id="sl11" itemLabel="王昭君" itemValue="1"/>
+                    <f:selectItem id="sl22" itemLabel="吕布" itemValue="2"/>
+                    <f:selectItem id="sl33" itemLabel="妲己" itemValue="3"/>
+                    <f:selectItem id="sl44" itemLabel="云中君" itemValue="4"/>
+                    <f:selectItem id="sl55" itemLabel="嬴政" itemValue="5"/>
+                </h:selectOneMenu>
+                <br/>
+            </td>
+            <td>
+                <h:selectOneRadio value="passdata">
+                    <f:selectItem id="sl111" itemLabel="王昭君" itemValue="FS"/>
+                    <f:selectItem id="sl222" itemLabel="吕布" itemValue="ZS"/>
+                    <f:selectItem id="sl333" itemLabel="妲己" itemValue="FS"/>
+                    <f:selectItem id="sl444" itemLabel="云中君" itemValue="CK"/>
+                    <f:selectItem id="sl555" itemLabel="嬴政" itemValue="FS"/>
+                </h:selectOneRadio>
+            </td>
+
+            <!--多选-->
+            <h:selectManyCheckbox value="haha">
+                <f:selectItem id="sl1111" itemLabel="王昭君" itemValue="FS"/>
+                <f:selectItem id="sl2222" itemLabel="吕布" itemValue="ZS"/>
+                <f:selectItem id="sl3333" itemLabel="妲己" itemValue="FS"/>
+                <f:selectItem id="sl4444" itemLabel="云中君" itemValue="CK"/>
+                <f:selectItem id="sl5555" itemLabel="嬴政" itemValue="FS"/>
+            </h:selectManyCheckbox>
+        </tr>
+        <tr>
+            <td>
+                <!--可多选-->
+                <h:selectManyListbox value="lal">
+                    <f:selectItem itemLabel="王昭君" itemValue="FS"/>
+                    <f:selectItem itemLabel="吕布" itemValue="ZS"/>
+                    <f:selectItem itemLabel="妲己" itemValue="FS"/>
+                    <f:selectItem itemLabel="云中君" itemValue="CK"/>
+                    <f:selectItem itemLabel="嬴政" itemValue="FS"/>
+                </h:selectManyListbox>
+            </td>
+            <td>
+                <!--只能单选-->
+                <h:selectOneListbox value="passdata" id="sol1" size="3">
+                    <f:selectItem itemLabel="王昭君" itemValue="FS"/>
+                    <f:selectItem itemLabel="吕布" itemValue="ZS"/>
+                    <f:selectItem itemLabel="妲己" itemValue="FS"/>
+                    <f:selectItem itemLabel="云中君" itemValue="CK"/>
+                    <f:selectItem itemLabel="嬴政" itemValue="FS"/>
+                </h:selectOneListbox>
+            </td>
+        </tr>
+        <tr>
+            <h:selectManyMenu>
+                <f:selectItem itemLabel="王昭君" itemValue="FS"/>
+                <f:selectItem itemLabel="吕布" itemValue="ZS"/>
+                <f:selectItem itemLabel="妲己" itemValue="FS"/>
+                <f:selectItem itemLabel="云中君" itemValue="CK"/>
+                <f:selectItem itemLabel="嬴政" itemValue="FS"/>
+            </h:selectManyMenu>
+        </tr>
+    </table>
+</h:body>
+</html>

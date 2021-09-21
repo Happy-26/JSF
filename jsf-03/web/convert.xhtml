@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    数据转换
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputText id="o1" value="maxFractionDigits: #{data.no}">
+            <f:convertNumber for="o1" maxFractionDigits="1"/>
+        </h:outputText><br/>
+        <h:outputText id="o2" value="minFractionDigits: #{data.no}">
+            <f:convertNumber for="o2" minFractionDigits="3"/>
+        </h:outputText><br/>
+        <h:outputText id="o3" value="#{data.no}">
+
+        </h:outputText><br/>
+        <h:outputText id="d1" value="#{data.date}">
+            <!--pattern="yyyy/mm/dd" 日期格式-->
+            <f:convertDateTime for="d1" dateStyle="long" pattern="yyyy/mm/dd"/>
+        </h:outputText><br/>
+        <h:outputText id="d2" value="#{data.date}">
+
+        </h:outputText><br/>
+    </h:form>
+</h:body>
+
+</html>

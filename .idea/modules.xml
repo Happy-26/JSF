@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JSF.iml" filepath="$PROJECT_DIR$/.idea/JSF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-01/jsf-01.iml" filepath="$PROJECT_DIR$/jsf-01/jsf-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-02/jsf-02.iml" filepath="$PROJECT_DIR$/jsf-02/jsf-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-03/jsf-03.iml" filepath="$PROJECT_DIR$/jsf-03/jsf-03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-04/jsf-04.iml" filepath="$PROJECT_DIR$/jsf-04/jsf-04.iml" />
+    </modules>
+  </component>
+</project>
