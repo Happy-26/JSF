@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>验证器</h:head>
+<h:body>
+    <h:form>
+        username：<h:inputText id="username" value="#{user.username}" required="true">
+            <!--字符串长度-->
+            <f:validateLength maximum="10" minimum="2" />
+        </h:inputText> <h:messages for="username"/><br/>
+        age：<h:inputText id="age" value="#{user.age}" required="true">
+            <!--数据值范围-->
+            <f:validateLongRange maximum="200" minimum="0" />
+        </h:inputText><h:messages for="age"/> <br/>
+        salary：<h:inputText id="salary" required="true">
+            <!--值范围-->
+            <f:validateDoubleRange maximum="100000" minimum="100" />
+        </h:inputText> <h:messages for="salary"/><br/>
+        password：<h:inputText id="password" value="#{user.password}" required="true">
+            <!--正则，四个int类型-->
+            <f:validateRegex pattern="\d\d\d\d" />
+        </h:inputText> <h:messages for="password"/><br/>
+
+        自定义验证器——bean中
+        <h:inputText  id="valage" value="#{user.age}" validator="#{user.validate}"/><h:messages for="valage"/><br/>
+
+        自定义验证器类
+        <h:inputText id="valname" value="#{user.username}">
+            <f:validator validatorId="MyValidator"/>
+        </h:inputText> <h:messages for="valname"/><br/>
+
+
+        <!--<h:inputText>
+            <f:validateBean maximum="6" minimum="2" />
+        </h:inputText> <br/>
+        <h:inputText>
+            <f:validateRequired maximum="6" minimum="2" />
+        </h:inputText> <br/>-->
+
+        <h:commandButton value="提交" action="result_validater" />
+    </h:form>
+</h:body>
+</html>

@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/jsf-02/jsf-02.iml" filepath="$PROJECT_DIR$/jsf-02/jsf-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsf-03/jsf-03.iml" filepath="$PROJECT_DIR$/jsf-03/jsf-03.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsf-04/jsf-04.iml" filepath="$PROJECT_DIR$/jsf-04/jsf-04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-05/jsf-05.iml" filepath="$PROJECT_DIR$/jsf-05/jsf-05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-hibernate-01/jsf-hibernate-01.iml" filepath="$PROJECT_DIR$/jsf-hibernate-01/jsf-hibernate-01.iml" />
     </modules>
   </component>
 </project>

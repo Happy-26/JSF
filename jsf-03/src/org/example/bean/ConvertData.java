@@ -1,12 +1,14 @@
 package org.example.bean;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import java.util.Date;
 
 @ManagedBean(name = "data")
 @RequestScoped
 public class ConvertData {
+    @ManagedProperty(value = "0")
     private double no;
     private Date date;
 

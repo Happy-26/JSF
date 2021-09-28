@@ -58,8 +58,6 @@
                     <h:commandLink action="pge1" value="JumpLink"/>
                 </h:form>
             </td>
-        </tr>
-        <tr>
             <td>
                 <h:outputText value="勾一下呗   true"/>
                 <!-- 写true默认勾选，false不勾选 -->
@@ -90,8 +88,27 @@
                     <f:selectItem id="sl555" itemLabel="嬴政" itemValue="FS"/>
                 </h:selectOneRadio>
             </td>
+            <td>
+                <!--只能单选-->
+                <h:selectOneListbox value="passdata" id="sol1" size="3">
+                    <f:selectItem itemLabel="王昭君" itemValue="FS"/>
+                    <f:selectItem itemLabel="吕布" itemValue="ZS"/>
+                    <f:selectItem itemLabel="妲己" itemValue="FS"/>
+                    <f:selectItem itemLabel="云中君" itemValue="CK"/>
+                    <f:selectItem itemLabel="嬴政" itemValue="FS"/>
+                </h:selectOneListbox>
+            </td>
         </tr>
         <tr>
+            <td>
+                <h:selectManyMenu>
+                    <f:selectItem itemLabel="王昭君" itemValue="FS"/>
+                    <f:selectItem itemLabel="吕布" itemValue="ZS"/>
+                    <f:selectItem itemLabel="妲己" itemValue="FS"/>
+                    <f:selectItem itemLabel="云中君" itemValue="CK"/>
+                    <f:selectItem itemLabel="嬴政" itemValue="FS"/>
+                </h:selectManyMenu>
+            </td>
             <td>
                 <!--多选-->
                 <h:selectManyCheckbox value="haha">
@@ -111,25 +128,6 @@
                     <f:selectItem itemLabel="云中君" itemValue="CK"/>
                     <f:selectItem itemLabel="嬴政" itemValue="FS"/>
                 </h:selectManyListbox>
-            </td>
-            <td>
-                <!--只能单选-->
-                <h:selectOneListbox value="passdata" id="sol1" size="3">
-                    <f:selectItem itemLabel="王昭君" itemValue="FS"/>
-                    <f:selectItem itemLabel="吕布" itemValue="ZS"/>
-                    <f:selectItem itemLabel="妲己" itemValue="FS"/>
-                    <f:selectItem itemLabel="云中君" itemValue="CK"/>
-                    <f:selectItem itemLabel="嬴政" itemValue="FS"/>
-                </h:selectOneListbox>
-            </td>
-            <td>
-                <h:selectManyMenu>
-                    <f:selectItem itemLabel="王昭君" itemValue="FS"/>
-                    <f:selectItem itemLabel="吕布" itemValue="ZS"/>
-                    <f:selectItem itemLabel="妲己" itemValue="FS"/>
-                    <f:selectItem itemLabel="云中君" itemValue="CK"/>
-                    <f:selectItem itemLabel="嬴政" itemValue="FS"/>
-                </h:selectManyMenu>
             </td>
         </tr>
     </table>

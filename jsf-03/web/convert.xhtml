@@ -11,21 +11,23 @@
 <h:body>
     <h:form>
         <h:outputText id="o" value="原始数据  #{data.no}"/><br/>
-        <h:outputText id="o1" value="maxFractionDigits: #{data.no}">
-            <f:convertNumber for="o1" maxFractionDigits="2"/>
+        <!--最大长度为3-->
+        <h:outputText value="#{data.no}">
+            <f:convertNumber maxFractionDigits="3"/>
         </h:outputText><br/>
-        <h:outputText id="o2" value="minFractionDigits: #{data.no}">
-            <f:convertNumber for="o2" minFractionDigits="3"/>
+        <!--最小长度为2-->
+        <h:outputText  value="#{data.no}">
+            <f:convertNumber  minFractionDigits="2"/>
         </h:outputText><br/>
-        <h:outputText id="o3" value="#{data.no}">
-            <f:convertNumber for="o3" maxIntegerDigits="3"/>
+        <!--整数部分最大的长度为5-->
+        <h:outputText  value="#{data.no}">
+            <f:convertNumber maxIntegerDigits="5"/>
         </h:outputText><br/>
+
+        <!--日期格式转换-->
         <h:outputText id="d1" value="#{data.date}">
             <!--pattern="yyyy/mm/dd" 日期格式-->
             <f:convertDateTime for="d1" dateStyle="long" pattern="yyyy/mm/dd"/>
-        </h:outputText><br/>
-        <h:outputText id="d2" value="#{data.date}">
-
         </h:outputText><br/>
     </h:form>
 </h:body>

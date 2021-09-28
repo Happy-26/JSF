@@ -17,6 +17,7 @@
                   <!--  -->
                   <h:inputText required="true" requiredMessage="请输入" id="it1">
                      <f:validateLength for="it1" minimum="3" maximum="5"/>
+                      <!--只要写在标签内，不用绑定id也可以-->
                      <f:validateLongRange minimum="100" maximum="1000"/>
                      <f:validateDoubleRange for="it1" minimum="100" maximum="1000"/>
                       <!-- 正则 -->
@@ -44,18 +45,15 @@
                 <h2>转换器</h2>
                 <h:form>
                     <h:outputText value="输入数字"/>
-                    <h:inputText id="it2" value="#{data.no}">
+                    <h:inputText value="#{data.no}">
                         <!-- 最精确五位小数，最起码两位小数 -->
-                        <f:convertNumber for="it2" maxFractionDigits="5" minFractionDigits="2"/>
+                        <!--<f:convertNumber maxFractionDigits="5" minFractionDigits="2"/>-->
                     </h:inputText><br/>
                     <h:outputText value="#{data.date}" id="ot1">
 
                     </h:outputText><br/>
                     <h:commandButton value="submit" action="convert"/>
                 </h:form>
-            </td>
-            <td>
-
             </td>
         </tr>
     </table>

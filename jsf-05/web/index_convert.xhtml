@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:form>
+    <h:panelGrid columns="3">
+        <h:outputText value=""/>
+        <!--转换数字-->
+        <h:inputText id="amount" value="#{receipt.amount}" size="20" required="true" label="Amount">
+            <f:convertNumber minFractionDigits="2"/>
+        </h:inputText> <h:message for="amount"/>
+
+        <!--转换日期-->
+        <h:inputText id="date" value="#{receipt.date}" >
+            <f:convertDateTime pattern="yyyy-MM-dd" />
+        </h:inputText> <h:messages for="date"/>
+
+        <!--自定义转换器-->
+        <h:inputText id="inputInfo" value="#{receipt.inputInfo}">
+            <f:converter converterId="myConvert1" />
+        </h:inputText> <h:messages for="inputInfo"/>
+    </h:panelGrid>
+    <h:commandButton value="submit" action="result_convert"/>
+</h:form>
+
+</html>

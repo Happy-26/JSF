@@ -1,5 +1,10 @@
 package bean;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+@ManagedBean
+@RequestScoped
 public class ViewBean {
     private String name;
 
@@ -13,5 +18,12 @@ public class ViewBean {
 
     public String submit() {
         return "next";
+    }
+
+    @Override
+    public String toString() {
+        return "ViewBean{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

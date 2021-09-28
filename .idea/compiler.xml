@@ -7,6 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jsf-05" />
+        <module name="jsf-hibernate-01" />
         <module name="jsf-01" />
         <module name="jsf-02" />
       </profile>
@@ -16,6 +18,8 @@
       <module name="jsf-02" target="1.8" />
       <module name="jsf-03" target="1.8" />
       <module name="jsf-04" target="1.8" />
+      <module name="jsf-05" target="1.8" />
+      <module name="jsf-hibernate-01" target="1.8" />
       <module name="JSF-test" target="1.8" />
       <module name="tomcat-jsf-01" target="1.8" />
     </bytecodeTargetLevel>
