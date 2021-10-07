@@ -1,6 +1,5 @@
 package org.example;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 import org.junit.Test;
 
 import java.util.regex.Pattern;
@@ -14,7 +13,14 @@ import java.util.regex.Pattern;
 public class RegexTest {
     @Test
     public void test01(){
-        String regex = "\\d*@qq.com";
-        System.out.println(Pattern.matches(regex, "488127311@qq.com"));
+        String regex = "\\w*@\\w*.[a-z]*";
+        String regex1 = "^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.[a-zA-Z0-9]{2,6}$";
+
+        String myregex = "^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*\\.[a-zA-Z0-9]{2,6}$";
+
+        System.out.println(Pattern.matches(myregex, "488127311@qq.com"));
+        System.out.println(Pattern.matches(myregex, "488127311@163.com"));
+        System.out.println(Pattern.matches(myregex, "488127311@outlook.com"));
+        System.out.println(Pattern.matches(myregex, "488127311@qwe.qom"));
     }
 }

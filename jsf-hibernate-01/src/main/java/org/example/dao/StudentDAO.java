@@ -18,4 +18,6 @@ public interface StudentDAO {
     List<Student> selectAllStudents();
 
     boolean deleteStudentById();
+
+    Student login(Student student);
 }

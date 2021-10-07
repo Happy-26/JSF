@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
 import java.util.List;
 
 /**
@@ -26,9 +28,10 @@ public class StudentServiceImpl implements StudentService {
     private StudentDAO studentDAO;
 
     @Override
-    public boolean insertStudent(Student student) {
-        System.out.println(student);
-        return studentDAO.insertStudent(student);
+    public String insertStudent(Student student) {
+        studentDAO.insertStudent(student);
+
+        return "info";
     }
 
     @Override
@@ -43,8 +46,16 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public boolean deleteStudentById() {
-        return studentDAO.deleteStudentById();
+    public String deleteStudentById() {
+        studentDAO.deleteStudentById();
+        return "index";
+    }
+
+    @Override
+    public String login(Student student ) {
+        student = studentDAO.login(student);
+
+        return "info";
     }
 
     public StudentDAO getStudentDAO() {

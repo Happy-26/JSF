@@ -2,6 +2,7 @@ package org.example.service;
 
 import org.example.pojo.Student;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -11,11 +12,13 @@ import java.util.List;
  * @Date: 2021/9/28 20:28
  */
 public interface StudentService {
-    boolean insertStudent(Student student);
+    String insertStudent(Student student);
 
     Student selectStudentById(Integer id);
 
     List<Student> selectAllStudents();
 
-    boolean deleteStudentById();
+    String deleteStudentById();
+
+    String login(Student student);
 }

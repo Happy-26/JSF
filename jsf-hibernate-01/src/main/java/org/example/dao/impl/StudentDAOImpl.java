@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -47,5 +48,17 @@ public class StudentDAOImpl implements StudentDAO {
     @Override
     public boolean deleteStudentById() {
         return false;
+    }
+
+    @Override
+    public Student login(Student student) {
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("FROM org.example.pojo.Student");
+        List<Student> studentList = query.list();
+        for (Student s: studentList) {
+            if (s.getPassword().equals(student.getPassword()) && s.getName().equals(student.getName()))
+                return s;
+        }
+        return null;
     }
 }

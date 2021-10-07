@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:hL="http://java.sun.com/jsf/html">
+<h:head>
+    <script type="text/javascript">
+        function fresh() {
+            if (sessionStorage.getItem("first") != "1") {
+                sessionStorage.setItem("first", "1");
+                location.reload();
+            }
+        }
+    </script>
+</h:head>
+<h:body onload="fresh()">
+    <h1>注册账号</h1>
+    <h:form>
+        <hL:panelGrid columns="3" border="2" cellpadding="3" cellspacing="5">
+            <f:facet name="header"> 注册 </f:facet>
+            <label>姓名</label>
+            <h:inputText id="name" value="#{student.name}" required="true"/> <h:messages for="name" />
+
+            <label>密码</label>
+            <h:inputSecret id="password" value="#{student.password}">
+                <f:validateLength  minimum="8" />
+            </h:inputSecret><h:messages for="password"/>
+
+            <label>性别</label>
+            <h:selectOneListbox value="#{student.gender}" id="gender" size="3" style="width: 50px" required="true">
+                <f:selectItem itemLabel="男" itemValue="男"/>
+                <f:selectItem itemLabel="女" itemValue="女"/>
+            </h:selectOneListbox><h:messages for="gender"/>
+
+            <label>生日</label>
+            <h:inputText id="birth" value="#{student.birth}">
+                <f:validator validatorId="birthValidator"/>
+            </h:inputText><h:messages for="birth"/>
+
+            <label>邮箱</label>
+            <h:inputText id="email" value="#{student.email}" validator="mailValidator"/><h:messages for="email"/>
+
+
+            <label>专业</label>
+            <h:selectOneRadio value="#{student.profession}" id="profession" size="3" required="true">
+                <f:selectItem itemLabel="计算机科学与技术" itemValue="计算机科学与技术"/>
+                <f:selectItem itemLabel="软件工程" itemValue="软件工程"/>
+                <f:selectItem itemLabel="网络工程" itemValue="网络工程"/>
+            </h:selectOneRadio><h:messages for="profession"/>
+
+
+            <label>个人说明</label>
+            <h:inputTextarea id="motto" cols="20" rows="5" value="#{student.motto}" required="true">
+                <f:converter converterId="/mottoConvert"/>
+            </h:inputTextarea><h:messages for="motto"/>
+
+
+            <h:commandButton action="login" value="登陆"/><h:inputHidden/><!--占位-->
+            <h:commandButton action="#{student.save()}" value="注册"/>
+
+        </hL:panelGrid>
+    </h:form>
+</h:body>
+</html>

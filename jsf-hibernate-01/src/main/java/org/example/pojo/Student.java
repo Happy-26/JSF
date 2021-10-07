@@ -1,6 +1,11 @@
 package org.example.pojo;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.enterprise.context.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.Entity;
@@ -16,7 +21,10 @@ import javax.persistence.Id;
  */
 @Entity(name = "student")
 @ManagedBean(name = "student")
-@RequestScoped
+@ApplicationScoped
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,38 +32,16 @@ public class Student {
 
     private String name;
 
-    private String address;
+    private String password;
 
-    public Integer getId() {
-        return id;
-    }
+    private boolean gender;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    private String birth;
 
-    public String getName() {
-        return name;
-    }
+    private String email;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String profession;
 
-    public String getAddress() {
-        return address;
-    }
+    private String motto;
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                '}';
-    }
 }

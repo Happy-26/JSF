@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+    <title>JSF Spring Hibernate Integration</title>
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-color: #ccc;
+        }
+
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #ccc;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #ccc;
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
+        .tg .tg-4eph {
+            background-color: #f9f9f9
+        }
+    </style>
+    <script type="text/javascript">
+        function fresh() {
+            if (sessionStorage.getItem("first") != "1") {
+                sessionStorage.setItem("first", "1");
+                location.reload();
+            }
+        }
+    </script>
+</h:head>
+<h:body onload="fresh()">
+    <h3>学生列表</h3>
+    <c:if test="${!empty studentService.selectAllStudents()}">
+        <h:dataTable value="${studentService.selectAllStudents()}" first="0" frame="border" rows="5" rules="all"
+                     var="stu" cellpadding="5" width="100%" border="2">
+            <f:facet name="header">表头</f:facet>
+            <h:column>
+                <f:facet name="header">Student ID</f:facet>
+                <h:outputText value="${stu.id}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Student Name</f:facet>
+                <h:outputText value="${stu.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Student password</f:facet>
+                <h:outputText value="${stu.password}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Student gender</f:facet>
+                <h:outputText value="${stu.gender}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Student birth</f:facet>
+                <h:outputText value="${stu.birth}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Student email</f:facet>
+                <h:outputText value="${stu.email}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Student profession</f:facet>
+                <h:outputText value="${stu.profession}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Student motto</f:facet>
+                <h:outputText value="${stu.motto}"/>
+            </h:column>
+            <f:facet name="footer">表尾</f:facet>
+        </h:dataTable>
+
+    </c:if>
+</h:body>
+</html>

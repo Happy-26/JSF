@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <script type="text/javascript">
+        function fresh() {
+            if (sessionStorage.getItem("first") != "1") {
+                sessionStorage.setItem("first", "1");
+                location.reload();
+            }
+        }
+    </script>
+</h:head>
+<h:body onload="fresh()">
+    <h1>注册账号</h1>
+    <h:form>
+        <table>
+            <tr>
+                <td><label>Name</label></td>
+                <td><h:inputText id="name" value="#{student.name}"/></td>
+            </tr>
+            <tr>
+                <td><label>password</label></td>
+                <td><h:inputSecret id="password" value="#{student.password}"/></td>
+            </tr>
+            <tr>
+                <td><label>gender</label></td>
+                <td><h:inputText id="gender" value="#{student.gender}"/></td>
+            </tr>
+            <tr>
+                <td><label>birth</label></td>
+                <td><h:inputText id="birth" value="#{student.birth}"/></td>
+            </tr>
+            <tr>
+                <td><label>email</label></td>
+                <td><h:inputText id="email" value="#{student.email}" validator="mailValidator"/><h:messages for="email"/></td>
+            </tr>
+            <tr>
+                <td><label>profession</label></td>
+                <td><h:inputText id="profession" value="#{student.profession}"/></td>
+            </tr>
+            <tr>
+                <td><label>motto</label></td>
+                <td><h:inputText id="motto" value="#{student.motto}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h:commandButton action="#{studentService.insertStudent(student)}" value="注册"/>
+                </td>
+            </tr>
+        </table>
+    </h:form>
+</h:body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:hL="http://java.sun.com/jsf/html">
+<h:head>
+    <script type="text/javascript">
+        function fresh() {
+            if (sessionStorage.getItem("first") != "1") {
+                sessionStorage.setItem("first", "1");
+                location.reload();
+            }
+        }
+    </script>
+</h:head>
+<h:body onload="fresh()">
+    <h1>个人信息</h1>
+    <h:form>
+        <hL:panelGrid columns="2" border="2" cellpadding="3" cellspacing="5">
+            <f:facet name="header"> 个人信息 </f:facet>
+            <h:outputText value="姓名"/>
+            <h:outputText value="#{student.name}"/>
+            <h:outputText value="密码"/>
+            <h:outputText value="#{student.password}"/>
+            <h:outputText value="性别"/>
+            <h:outputText value="#{student.gender}"/>
+            <h:outputText value="生日"/>
+            <h:outputText value="#{student.birth}"/>
+            <h:outputText value="邮箱"/>
+            <h:outputText value="#{student.email}"/>
+            <h:outputText value="专业"/>
+            <h:outputText value="#{student.profession}"/>
+            <h:outputText value="描述"/>
+            <h:outputText value="#{student.motto}"/>
+            <h:commandButton action="viewStudent" value="查看所有学生信息"/>
+        </hL:panelGrid>
+    </h:form>
+</h:body>
+</html>

@@ -42,6 +42,7 @@ public class MyValidator implements Validator {
             facesMessage.setSummary("验证失败");
             facesMessage.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ValidatorException(facesMessage);
+
         }
     }
 }

@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * @Author: HAPPY
@@ -23,7 +24,13 @@ public class MyTest01 {
         Transaction transaction = session.beginTransaction();
         Student s = new Student();
         s.setName("张三");
-        s.setAddress("中国宁夏");
+        s.setPassword("123456");
+        s.setGender(true);
+        s.setBirth("2001-02-01");
+        s.setEmail("488127311@qq.com");
+        s.setProfession("IT");
+        s.setMotto("把开源的变成自己的，把自己的变成祖传的");
+
         session.save(s);
         transaction.commit();
         session.close();
@@ -35,5 +42,11 @@ public class MyTest01 {
         Query query = session.createQuery("FROM org.example.pojo.Student");
         List<Student> studentList = query.list();
         studentList.forEach(System.out::println);
+    }
+
+    @Test
+    public  void test03(){
+        String regex = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9]+(\\.[0-9a-zA-Z]+)*\\.[a-zA-Z0-9]{2,6}$";
+        System.out.println(Pattern.matches(regex, "488127311@qq.com"));
     }
 }
