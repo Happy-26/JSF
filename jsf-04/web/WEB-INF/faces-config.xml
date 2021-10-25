@@ -4,9 +4,9 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
-    <managed-bean>
-        <managed-bean-class>bean.ViewBean</managed-bean-class>
-        <managed-bean-name>vb</managed-bean-name>
-        <managed-bean-scope>request</managed-bean-scope>
-    </managed-bean>
+    <managed-team.niit.bean>
+        <managed-team.niit.bean-class>team.niit.bean.ViewBean</managed-team.niit.bean-class>
+        <managed-team.niit.bean-name>vb</managed-team.niit.bean-name>
+        <managed-team.niit.bean-scope>request</managed-team.niit.bean-scope>
+    </managed-team.niit.bean>
 </faces-config>

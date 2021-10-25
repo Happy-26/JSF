@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+</h:head>
+
+<f:view>
+    <f:phaseListener type="AjaxPhase"/>
+</f:view>
+
+<h:body>
+    <center>
+        <h:form>
+            <h:panelGrid columns="2">
+
+                <f:facet name="header"><h2>Registeration</h2></f:facet>
+
+                <h:outputText value="Enter ID:"/>
+                <h:inputText id="it1" value="#{bean.uid}" validator="#{bean.valiId}"
+                             validatorMessage="非法字符">
+                    <f:ajax event="valueChange" render="idError" execute="@this"/>
+                </h:inputText>
+                <h:message for="it1" id="idError" style="color:red"/>
+
+            </h:panelGrid>
+        </h:form>
+    </center>
+</h:body>
+</html>

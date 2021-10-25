@@ -7,6 +7,13 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:hL="http://java.sun.com/jsf/html">
 <h:head>
+    <style type="text/css">
+        .text {
+            width: 400px;
+            height: 35px;
+            border: 2px solid lightslategrey;
+        }
+    </style>
     <script type="text/javascript">
         function fresh() {
             if (sessionStorage.getItem("first") != "1") {
@@ -17,51 +24,55 @@
     </script>
 </h:head>
 <h:body onload="fresh()">
-    <h1>注册账号</h1>
-    <h:form>
-        <hL:panelGrid columns="3" border="2" cellpadding="3" cellspacing="5">
-            <f:facet name="header"> 注册 </f:facet>
-            <label>姓名</label>
-            <h:inputText id="name" value="#{student.name}" required="true"/> <h:messages for="name" />
+    <h:form style="width: 60%; margin: 100px auto;text-align: center">
+        <hL:panelGrid columns="3" border="2" cellpadding="15" cellspacing="0"
+                      style="width:100%; border: 2px solid darkcyan;margin: 0px auto;text-align: left ">
+            <f:facet name="header" style="text-align: center"> 注册账号 </f:facet>
+            <label>用户名</label>
+            <h:inputText class="text" id="name" value="#{std.studentEntity.name}" required="true" validator="#{std.validateName}" validatorMessage="用户名已使用">
+                <f:ajax event="valueChange" render="nameError"/>
+            </h:inputText><hL:inputHidden/>
 
             <label>密码</label>
-            <h:inputSecret id="password" value="#{student.password}">
-                <f:validateLength  minimum="8" />
+            <h:inputSecret class="text" id="password" value="#{std.studentEntity.password}">
+                <f:validateLength minimum="8"/>
             </h:inputSecret><h:messages for="password"/>
 
             <label>性别</label>
-            <h:selectOneListbox value="#{student.gender}" id="gender" size="3" style="width: 50px" required="true">
+            <h:selectOneRadio class="text" value="#{std.studentEntity.gender}" id="gender" size="3"
+                              style="width: 200px;" required="true">
                 <f:selectItem itemLabel="男" itemValue="男"/>
                 <f:selectItem itemLabel="女" itemValue="女"/>
-            </h:selectOneListbox><h:messages for="gender"/>
+            </h:selectOneRadio><h:messages for="gender"/>
 
             <label>生日</label>
-            <h:inputText id="birth" value="#{student.birth}">
+            <h:inputText id="birth" value="#{std.studentEntity.birth}" class="text">
                 <f:validator validatorId="birthValidator"/>
             </h:inputText><h:messages for="birth"/>
 
             <label>邮箱</label>
-            <h:inputText id="email" value="#{student.email}" validator="mailValidator"/><h:messages for="email"/>
-
+            <h:inputText class="text" id="email" value="#{std.studentEntity.email}"
+                         validator="mailValidator"/><h:messages for="email"/>
 
             <label>专业</label>
-            <h:selectOneRadio value="#{student.profession}" id="profession" size="3" required="true">
+            <h:selectOneRadio value="#{std.studentEntity.profession}" id="profession" size="3" required="true">
                 <f:selectItem itemLabel="计算机科学与技术" itemValue="计算机科学与技术"/>
                 <f:selectItem itemLabel="软件工程" itemValue="软件工程"/>
                 <f:selectItem itemLabel="网络工程" itemValue="网络工程"/>
             </h:selectOneRadio><h:messages for="profession"/>
 
-
             <label>个人说明</label>
-            <h:inputTextarea id="motto" cols="20" rows="5" value="#{student.motto}" required="true">
+            <h:inputTextarea id="motto" cols="80" rows="5" value="#{std.studentEntity.motto}" required="true"
+                             style="width: 400px; border: medium solid 5px">
                 <f:converter converterId="/mottoConvert"/>
             </h:inputTextarea><h:messages for="motto"/>
 
-
-            <h:commandButton action="login" value="登陆"/><h:inputHidden/><!--占位-->
-            <h:commandButton action="#{student.save()}" value="注册"/>
+            <!-- 注册按钮 -->
+            <h:commandButton action="#{std.save()}" value="注册"
+                             style="width: 150px; height: 35px; background-color: darkcyan; color: white;font-size: 25px"/>
 
         </hL:panelGrid>
+        <a href="login.xhtml" style="font-size: 20px">登陆</a>
     </h:form>
 </h:body>
 </html>

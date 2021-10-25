@@ -21,12 +21,12 @@
         <hL:panelGrid columns="2" border="2" cellpadding="3" cellspacing="5">
             <f:facet name="header"> 输入信息 </f:facet>
             <h:outputText value="姓名"/>
-            <h:inputText value="#{student.name}"/>
+            <h:inputText value="#{std.studentEntity.name}"/>
             <h:outputText value="密码"/>
-            <h:inputSecret value="#{student.password}"/>
+            <h:inputSecret value="#{std.studentEntity.password}"/>
             <f:facet name="footer">
-                <h:commandButton action="#{student.login()}" value="登陆"/>
-                <h:commandButton action="register" value="注册"/>
+                <h:commandButton action="#{std.login()}" value="登陆"/>
+                <h:commandButton action="#{std.clearValue()}" value="注册"/>
             </f:facet>
         </hL:panelGrid>
     </h:form>

@@ -20,7 +20,7 @@ public class BirthValidator implements Validator {
     public void validate(FacesContext facesContext, UIComponent uiComponent, Object o) throws ValidatorException {
         FacesMessage facesMessage = new FacesMessage();
 
-        String regex = "\\d{4}(\\-|/|\\.)\\d{1,2}(\\-|/|\\.)\\d{1,2}$";
+        String regex = "^\\d{4}(\\-|/|\\.)\\d{1,2}(\\-|/|\\.)\\d{1,2}$";
         if (Pattern.matches(regex, o.toString())) {
             facesMessage.setSummary("验证成功");
         } else {

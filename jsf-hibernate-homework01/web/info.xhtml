@@ -22,19 +22,19 @@
         <hL:panelGrid columns="2" border="2" cellpadding="3" cellspacing="5">
             <f:facet name="header"> 个人信息 </f:facet>
             <h:outputText value="姓名"/>
-            <h:outputText value="#{student.name}"/>
+            <h:outputText value="#{std.studentEntity.name}"/>
             <h:outputText value="密码"/>
-            <h:outputText value="#{student.password}"/>
+            <h:outputText value="#{std.studentEntity.password}"/>
             <h:outputText value="性别"/>
-            <h:outputText value="#{student.gender}"/>
+            <h:outputText value="#{std.studentEntity.gender}"/>
             <h:outputText value="生日"/>
-            <h:outputText value="#{student.birth}"/>
+            <h:outputText value="#{std.studentEntity.birth}"/>
             <h:outputText value="邮箱"/>
-            <h:outputText value="#{student.email}"/>
+            <h:outputText value="#{std.studentEntity.email}"/>
             <h:outputText value="专业"/>
-            <h:outputText value="#{student.profession}"/>
+            <h:outputText value="#{std.studentEntity.profession}"/>
             <h:outputText value="描述"/>
-            <h:outputText value="#{student.motto}"/>
+            <h:outputText value="#{std.studentEntity.motto}"/>
             <h:commandButton action="viewStudent" value="查看所有学生信息"/>
         </hL:panelGrid>
     </h:form>

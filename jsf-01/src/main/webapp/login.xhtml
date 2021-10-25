@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+</h:head>
+<h:body>
+    <h:form prependid="false" enctype="multipart/form-data" style="width: 100%;text-align: center;">
+        <!-- 这里是接受用户信息的输入框 -->
+        <h:panelGrid id="panel" columns="3" border="3" cellpadding="15"
+                     cellspacing="0" style="width:50%;border: mediumturquoise solid 5px;margin: 100px auto ">
+            <f:facet name="header">
+                <h:panelGroup style="display:block;text-align:center">
+                    <h:outputText value="学生信息上传"/>
+                </h:panelGroup>
+            </f:facet>
+
+            <h:outputLabel value="学生姓名："/>
+            <h:inputText value="#{login.user.username}" required="true"
+                         style="height: 40px;font-size: 18px;width: 400px;border:  #c8c8c8 solid 2px"/>
+            <span style="color: red; font-size: 10px">*</span>
+            <!-- 为了好看加了个红色*号，标志为必填项，报错太难看了就不让它显示了 -->
+
+            <h:outputLabel value="学生学号："/>
+            <h:inputText value="#{login.user.cardid}" required="true"
+                         style="height: 40px;font-size: 18px;width: 400px;border: #c8c8c8 solid 2px"/>
+            <span style="color: red; font-size: 10px">*</span>
+
+            <h:outputLabel value="学生性别："/>
+            <h:selectOneMenu id="sex" value="#{login.user.sex}" required="true"
+                             style="height: 40px;font-size: 18px;width: 410px;border: #c8c8c8 solid 2px">
+                <f:selectItem itemValue="#{null}" itemLable="--选择性别--"></f:selectItem>
+                <f:selectItems value="#{sexBean.sexList}"></f:selectItems>
+            </h:selectOneMenu>
+            <h:outputLabel value=""/>
+
+            <h:outputLabel value="学生年龄："/>
+            <h:inputText value="#{login.user.age}" id="studentage"
+                         required="ture" style="height: 40px;font-size: 18px;width: 400px;border: #c8c8c8 solid 2px">
+                <f:converter converterId="myconverter"></f:converter>
+            </h:inputText>
+            <h:outputLabel value="带*号的为必填项" style="color:red"/>
+
+            <h:outputLabel value="上传本人照片："/>
+            <h:inputFile value="#{fileUploadBean.file}"></h:inputFile>
+            <h:commandButton action="#{fileUploadBean.uploadFile()}" value="上传"
+                             style="background-color: darkcyan; width: 100px;height: 40px;font-size: 19px;color: white "></h:commandButton>
+            <!-- 这里表格空了，用注释来补一下 -->
+            <h:panelGroup style="display:block;text-align:center">
+                <h:commandButton action="#{login.login}" value="提交"
+                                 style="background-color: darkcyan; width: 100px;height: 40px;font-size: 19px;color: white "/>
+            </h:panelGroup>
+
+            <!-- 由于注释会占据表格位置，只好把注释写在表格以外的地方 -->
+        </h:panelGrid>
+    </h:form>
+
+    <!-- 页面上的展示都放在了屏幕下端，上传的图片在最下端 -->
+    <h:outputLabel value="#{login.tip}"/>
+
+    <h:outputText value="#{fileUploadBean.message}"
+                  rendered="#{!empty fileUploadBean.message}"></h:outputText>
+
+    <h:graphicImage url="#{fileUploadBean.url}" width="100px"
+                    height="100px" rendered="#{!empty fileUploadBean.url}">
+    </h:graphicImage>
+
+</h:body>
+</html>

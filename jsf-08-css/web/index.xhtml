@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+
+</head>
+<h:head>
+    <style type="text/css">
+        .form {
+            width: 400px;
+            height: 300px;
+            background-color: #eee;
+            border: #777 solid 2px;
+            margin: 150px auto;
+        }
+
+        .input-line {
+            width: 300px;
+            height: 40px;
+            margin: 20px auto;
+            font-size: 20px;
+            font-weight: lighter;
+            text-align: left;
+        }
+
+        .input-text {
+            width: 200px;
+            height: 30px;
+            margin: 0 auto;
+            font-size: 20px;
+            font-weight: lighter;
+            border: #59595e solid 2px;
+        }
+
+        .button {
+            width: 300px;
+            height: 55px;
+            background-color: dodgerblue;
+            color: white;
+            font-size: 25px;
+            margin: 40px 50px;
+        }
+
+        .label {
+            text-align: left;
+            line-height: 30px;
+            margin: 0 25px;
+            font-family: Verdana;
+        }
+    </style>
+</h:head>
+<h:body>
+    <div class="input-form" >
+
+        <h:form styleClass="form">
+            <br/><br/>
+            <div class="input-line"><h:outputLabel styleClass="label" value="账号"/> <h:inputText
+                    styleClass="input-text" placeholder="请输入账号"/></div>
+
+            <div class="input-line"><h:outputLabel styleClass="label" value="密码"/> <h:inputSecret
+                    styleClass="input-text" placeholder="请输入密码"/></div>
+            <button class="button" >登录</button>
+        </h:form>
+    </div>
+</h:body>
+</html>

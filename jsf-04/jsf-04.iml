@@ -9,6 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -19,6 +20,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="GlassFish 5.0.0 - JSF" level="application_server_libraries" />
+    <orderEntry type="library" name="JSF" level="project" />
+    <orderEntry type="library" name="Hibernate" level="project" />
   </component>
 </module>

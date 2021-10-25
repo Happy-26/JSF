@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+	<center>
+		
+		<br />
+		<h:form>
+			<h2>Enter id:</h2>
+			<!--
+				value: 页面调用
+				binding: 后端调用
+				onchange: 值更改触发动作
+			-->
+			ID:<h:inputText binding="#{valueBean.id}" onchange="this.form.submit()" valueChangeListener="#{valueBean.changeOperation}"/><br/>
+			msg1<h:inputText binding="#{valueBean.msg1}"/><br/>
+			msg2<h:inputText binding="#{valueBean.msg2}"/><br/>
+			msg3<h:inputText binding="#{valueBean.msg3}"/><br/>
+			msg4<h:inputText binding="#{valueBean.msg4}"/><br/>
+		</h:form>
+	</center>
+</h:body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+	version="2.3">
+
+	<!-- <from-view-id>/pagedir/*</from-view-id> -->
+	<!-- 使用*或直接删除下方标签 表示全局导航 -->
+	<!-- <from-view-id>*</from-view-id> -->
+
+	<!-- 1.dynamicNavigation -->
+	<navigation-rule>
+		<!--请求的来源页面-->
+		<from-view-id>/dynamic1.xhtml</from-view-id>
+
+		<!--处理请求的跳转-->
+		<navigation-case>
+			<!--请求提交页面的action是啥，这里就是啥-->
+			<from-action>#{team.niit.bean.selectJudge}</from-action>
+			<!--请求处理完的返回值-->
+			<from-outcome>great</from-outcome>
+			<!--目标页面-->
+			<to-view-id>/second.xhtml</to-view-id>
+			<!--重定向，不写默认转发-->
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{team.niit.bean.selectJudge}</from-action>
+			<from-outcome>less</from-outcome>
+			<to-view-id>/first.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- 2. ActionView -->
+	<navigation-rule>
+		<from-view-id>/employee.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{catalog.checkId}</from-action>
+			<from-outcome>error</from-outcome>
+			<to-view-id>/first.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{catalog.checkId}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/employee.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<!-- 3.ConditionNavigation -->
+	<navigation-rule>
+        <from-view-id>/conditionnnavigation.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{beanAccount.SelectAccount}</from-action>
+            <if>#{beanAccount.flag}</if>
+            <to-view-id>/first.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{beanAccount.SelectAccount}</from-action>
+            <to-view-id>/second.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{school.jump()}</from-action>
+			<from-outcome>xg</from-outcome>
+			<to-view-id>/xg.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{school.jump()}</from-action>
+			<from-outcome>wd</from-outcome>
+			<to-view-id>/wd.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

@@ -10,24 +10,33 @@
 </h:head>
 <h:body>
     <h:form>
-        <h:outputText id="o" value="原始数据  #{data.no}"/><br/>
-        <!--最大长度为3-->
+        原始数据<br/>
+        <h:outputText id="o" value="#{data.no}"/><br/><br/><br/>
+
+        小数最大长度为2<br/>
+        <h:outputText  value="#{data.no}">
+            <f:convertNumber  maxFractionDigits="2"/>
+        </h:outputText><br/><br/><br/>
+
+        小数最小长度为6<br/>
+        <h:outputText  value="#{data.no}">
+            <f:convertNumber  minFractionDigits="6"/>
+        </h:outputText><br/><br/><br/>
+
+        整数部分最大的长度为4<br/>
+        <h:outputText  value="#{data.no}">
+            <f:convertNumber maxIntegerDigits="4"/>
+        </h:outputText><br/><br/><br/>
+
+        小数最大长度为3<br/>
         <h:outputText value="#{data.no}">
             <f:convertNumber maxFractionDigits="3"/>
-        </h:outputText><br/>
-        <!--最小长度为2-->
-        <h:outputText  value="#{data.no}">
-            <f:convertNumber  minFractionDigits="2"/>
-        </h:outputText><br/>
-        <!--整数部分最大的长度为5-->
-        <h:outputText  value="#{data.no}">
-            <f:convertNumber maxIntegerDigits="5"/>
-        </h:outputText><br/>
+        </h:outputText><br/><br/><br/>
 
-        <!--日期格式转换-->
+        日期格式转换:yyyy/MM/dd HH:mm:ss SSS:<br/>
         <h:outputText id="d1" value="#{data.date}">
             <!--pattern="yyyy/mm/dd" 日期格式-->
-            <f:convertDateTime for="d1" dateStyle="long" pattern="yyyy/mm/dd"/>
+            <f:convertDateTime for="d1" dateStyle="long" pattern="yyyy/MM/dd HH:mm:ss SSS"/>
         </h:outputText><br/>
     </h:form>
 </h:body>

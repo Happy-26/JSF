@@ -1,10 +1,9 @@
 package org.example.dao.impl;
 
 import org.example.dao.StudentDAO;
-import org.example.pojo.Student;
+import org.example.entity.StudentEntity;
 import org.example.util.SessionFactoryUtil;
 import org.hibernate.Criteria;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
@@ -19,24 +18,24 @@ import java.util.List;
  */
 public class StudentDAOImpl implements StudentDAO {
     @Override
-    public boolean insetStudent(Student student) {
+    public boolean insetStudent(StudentEntity student) {
         Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        System.out.println(student);
         try {
             session.save(student);
             transaction.commit();
             return true;
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }
 
     @Override
-    public Student login(Student student) {
+    public StudentEntity login(StudentEntity student) {
         Session session = SessionFactoryUtil.getSessionFactory().openSession();
-        Criteria name = session.createCriteria(Student.class).add(Restrictions.like("name", student.getName()));
-        List<Student> list = name.list();
+        Criteria name = session.createCriteria(StudentEntity.class).add(Restrictions.like("name", student.getName()));
+        List<StudentEntity> list = name.list();
         if (list.size() == 1) {
             if(list.get(0).getPassword().equals(student.getPassword())) {
                 return list.get(0);
@@ -46,11 +45,23 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public List<Student> queryAll() {
+    public List<StudentEntity> queryAll() {
         Session session = SessionFactoryUtil.getSessionFactory().openSession();
-        Criteria c = session.createCriteria(Student.class);
+        Criteria c = session.createCriteria(StudentEntity.class);
 
-        List<Student> list = c.list();
+        List<StudentEntity> list = c.list();
         return c.list();
+    }
+
+    @Override
+    public boolean isExit(String name) {
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
+        Criteria c = session.createCriteria(StudentEntity.class).add(Restrictions.like("name", name));
+
+        List<StudentEntity> list = c.list();
+        if (list != null) {
+            return true;
+        }
+        return false;
     }
 }

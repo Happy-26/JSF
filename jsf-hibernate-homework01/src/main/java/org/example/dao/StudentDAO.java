@@ -1,6 +1,6 @@
 package org.example.dao;
 
-import org.example.pojo.Student;
+import org.example.entity.StudentEntity;
 
 import java.util.List;
 
@@ -16,11 +16,12 @@ public interface StudentDAO {
      * @param student 前端传入的数值
      * @return 是否插入成功
      */
-    boolean insetStudent(Student student);
+    boolean insetStudent(StudentEntity student);
 
 
-    Student login(Student student);
+    StudentEntity login(StudentEntity student);
 
-    List<Student> queryAll();
+    List<StudentEntity> queryAll();
 
+    boolean isExit(String name);
 }

@@ -58,7 +58,7 @@
 <h:body onload="fresh()">
     <h3>学生列表</h3>
     <h:form>
-        <h:dataTable value="#{student.selectAllStudents()}" first="0" frame="border" rows="5" rules="all"
+        <h:dataTable value="#{std.studentEntityList}" first="0" frame="border" rows="5" rules="all"
                      var="stu" cellpadding="5" width="100%" border="2">
             <f:facet name="header">表头</f:facet>
             <h:column>
