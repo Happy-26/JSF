@@ -1,9 +1,10 @@
+package org.example;
+
 import cn.hutool.core.date.DateTime;
 import cn.hutool.crypto.SecureUtil;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
