@@ -21,8 +21,7 @@ public class CourseEntity {
      * 课程编号
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String id;
 
     /**
      * 课程名称
@@ -30,7 +29,8 @@ public class CourseEntity {
     private String name;
 
     /**
-     * 课程序号，在一天中的第几节
+     * 课程序号，在一天中的第几节，数据库中course表不存储该属性，
+     * student_course存储该属性的值
      */
     private Integer no;
 
@@ -45,26 +45,20 @@ public class CourseEntity {
     private String category;
 
     /**
+     * 学生专业
+     */
+    private String major;
+
+    /**
      * 课程可选人数
      */
     private Integer quota;
 
-    /**
-     * 选课学生
-     */
-    @ManyToMany(mappedBy = "courseEntityList")
-    private List<StudentEntity> studentList;
-
-    // 重写 CourseEntity 的toString()方法，不输出studentList，避免无线套娃
-    @Override
-    public String toString() {
-        return "CourseEntity{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", no=" + no +
-                ", teacher='" + teacher + '\'' +
-                ", category='" + category + '\'' +
-                ", quota=" + quota +
-                '}';
+    public CourseEntity(String id, String name, String teacher, String category, Integer quota) {
+        this.id = id;
+        this.name = name;
+        this.teacher = teacher;
+        this.category = category;
+        this.quota = quota;
     }
 }

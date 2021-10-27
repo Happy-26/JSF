@@ -6,9 +6,9 @@ public class AjaxPhase implements PhaseListener {
 
     @Override
     public void afterPhase(PhaseEvent pe) {
-        System.out.println(pe.getPhaseId() + " ÒÑÍê³É");
+        System.out.println(pe.getPhaseId() + " å·²å®Œæˆ");
         if (pe.getPhaseId() == PhaseId.RENDER_RESPONSE)
-            System.out.println(" Ò³ÃæÒÑ¼ÓÔØ");
+            System.out.println(" é¡µé¢å·²åŠ è½½");
     }
 
     @Override

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+   <title>学生课表</title>
+</h:head>
+<h:form>
+    <h:dataTable value="#{student.classNumber()}" first="0" rows="5" rules="all"
+                 var="stu" cellpadding="5" width="100%" border="2" id="no" style="display: inline-block;width: 65px;margin: 0">
+        <h:column>
+            <f:facet name="header">第几节</f:facet>
+            <h:outputText value="#{stu}"/>
+        </h:column>
+    </h:dataTable>
+    <!-- 按照列优先遍历 courseEntity[0].name 相当于是 courseEntity[][0].name，遍历第一列 -->
+    <h:dataTable value="#{student.curriculum()}" first="0" rows="5" rules="all"
+                 var="courseEntity" cellpadding="5" width="100%" border="2" id="courseEntity" style="display: inline-block;width: 800px;margin-left: -10px">
+        <f:facet name="header">课表</f:facet>
+        <h:column>
+            <f:facet name="header">星期一</f:facet>
+            <h:outputText value="#{courseEntity[0].name}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">星期二</f:facet>
+            <h:outputText value="#{courseEntity[1].name}#{courseEntity[1].id}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">星期三</f:facet>
+            <h:outputText value="#{courseEntity[2].name}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">星期四</f:facet>
+            <h:outputText value="#{courseEntity[3].name}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">星期五</f:facet>
+            <h:outputText value="#{courseEntity[4].name}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">星期六</f:facet>
+            <h:outputText value="#{courseEntity[5].name}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">星期日</f:facet>
+            <h:outputText value="#{courseEntity[6].name}"/>
+        </h:column>
+    </h:dataTable>
+</h:form>
+</html>

@@ -46,7 +46,6 @@ public class Test01 {
         courseEntityList.add(courseEntity1);
         courseEntityList.add(courseEntity2);
         courseEntityList.add(courseEntity3);
-        student.setCourseEntityList(courseEntityList);
 
         session.save(courseEntity1);
         session.save(courseEntity2);
@@ -153,9 +152,9 @@ public class Test01 {
 
         List<StudentEntity> studentList = criteria.list();
         List<CourseEntity> courseEntityList = null;
-        for (StudentEntity student : studentList) {
-            courseEntityList = student.getCourseEntityList();
-        }
+//        for (StudentEntity student : studentList) {
+//            courseEntityList = student.getCourseEntityList();
+//        }
 
         courseEntityList.forEach(System.out::println);
     }
